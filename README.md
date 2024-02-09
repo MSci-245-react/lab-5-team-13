@@ -29,6 +29,12 @@ node -v
 
 # Getting Started with Create React App
 
+MSCI342-team13-lab5
+A project for setup and deployment demo.
+
+---
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
