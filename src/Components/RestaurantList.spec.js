@@ -1,10 +1,12 @@
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import RestaurantList from './RestaurantList';
 
-it('loads restaurants on first render', () => {
-  const loadRestaurants = jest.fn().mockName('loadRestaurants');
+describe('RestaurantList', () => {
+  it('loads restaurants on first render', () => {
+    const loadRestaurants = jest.fn().mockName('loadRestaurants');
 
-  render(<RestaurantList loadRestaurants={loadRestaurants} />);
+    render(<RestaurantList loadRestaurants={loadRestaurants} />);
 
-  expect(loadRestaurants).toHaveBeenCalled();
+    expect(loadRestaurants).toHaveBeenCalled();
+  });
 });
