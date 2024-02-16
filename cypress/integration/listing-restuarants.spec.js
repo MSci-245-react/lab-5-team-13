@@ -6,12 +6,16 @@ describe('Listing Restaurants', () => {
     cy.intercept('GET', 'https://api.outsidein.dev/*/restaurants', [
       {id: 1, name: sushiPlace},
       {id: 2, name: pizzaPlace},
-  ]);
+    ]);
 
     cy.visit('/');
     cy.contains(sushiPlace);
     cy.contains(pizzaPlace);
-    cy.intercept("https://api.outsidein.dev/*/restaurants",'[{"id":759,"name":"Pasta Place"},{"id":760,"name":"Salad Place"}]');
+    cy.intercept('https://api.outsidein.dev/*/restaurants', [
+      {id: 759, name: 'Pasta Place'},
+      {id: 760, name: 'Salad Place'},
+    ]);
     cy.visit('/');
+    cy.contains(pizzaPlace);
   });
 });
