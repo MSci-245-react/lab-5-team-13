@@ -1,10 +1,10 @@
-import RestaurantList from './RestaurantList';
+// import RestaurantList from './RestaurantList';
 
-export default function RestaurantScreen() {
-  return (
-    <div>
-      <h1>Restaurants</h1>
-      <RestaurantList />
-    </div>
-  );
-}
+// export default function RestaurantScreen() {
+//   return (
+//     <div>
+//       <h1>Restaurants</h1>
+//       <RestaurantList restaurants={[]}/>
+//     </div>
+//   );
+// }
