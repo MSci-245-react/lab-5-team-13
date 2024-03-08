@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementByAmount } from './counterSlice';
 
-export default function Counter() {
+export default function Increment() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('');
@@ -21,13 +21,17 @@ export default function Counter() {
           type="text"
           placeholder="Enter increment amount"
         />
+        </div>
+        <div>
         <button
           aria-label="Increment value by amount"
           onClick={handleIncrement}
         >
           Increment by amount
         </button>
-        <span>{count}</span>
+        </div>
+        <div>
+        <span>Current amount: {count}</span>
       </div>
     </div>
   );
